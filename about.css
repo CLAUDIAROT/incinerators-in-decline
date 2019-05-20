@@ -1,0 +1,77 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+  height: 1000px;
+  background: #FFFFFF;
+}
+
+/* unvisited link */
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: #eb5b1c;
+}
+
+h2 {
+  font-family: arial;
+  font-size: 20px;
+  color: black;
+  text-align: left;
+  color: #4961ad;
+
+}
+
+  .sidebar {
+  background: white;
+  float: left;
+  height: 40%;
+  padding: 10px;
+  width: 40%;
+  font-family: calibri;
+  font-size: 16px;
+  color: black;
+}
+
+.rightbar {
+  background: white;
+  float: right;
+  height: 100%;
+  opacity: 0.7;
+  padding: 10px;
+  width: 40%;
+  font-family: calibri;
+  font-size: 16px;
+  color: black;
+}
+
+.authortext {
+  float:left;
+  width: 50%;
+  text-align: right;
+}
+
+button {
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 0px 0px;
+  align: left;
+  cursor: pointer;
+}
+
+

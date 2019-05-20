@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Incinerators in Decline</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <!-- Load Leaflet CSS -->
+    <link href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+  </head>
+  <body>
+    
+    <!--
+      We put the map and sidebar in a map-wrapper so they will be positioned
+      and kept together
+    -->
+  
+    <div class="map-wrapper">
+      <div id="map"></div>
+      <div class="sidebar">
+        <par><b>Cick on the location of an MSW (Municipal Solid Waste) incinerator to see specific information about that facility.</b></b></par><br>
+        <!-- We create a div where the feature data will go when clicked on: -->
+        <div class = "sidebar-feature-content"></div>
+        </div>
+   
+      
+      <div class="leftbar">
+        
+          INCINERATORS IN DECLINE
+        <br>
+        <br>
+        <h5>
+        FILTER INCINERATORS
+        </h5>
+        
+         <button class= "toggle-nofilter">
+         NO FILTER
+        </button>
+        
+             <button class= "toggle-ej">
+         ENVIRONMENTAL JUSTICE COMMUNITY
+        </button>
+      <br>
+      
+        <button class= "toggle-tonnage">
+         TONNAGE PER DAY
+        </button>
+        
+        <br>
+        
+         <button class= "toggle-mercury">
+         MERCURY
+        </button>
+        
+            <button class= "toggle-pm25">
+         PM2.5
+        </button>
+        
+        <button class= "toggle-lead">
+         LEAD
+        </button>
+      
+        
+        <button class= "toggle-nox">
+         NOx
+        </button>
+        
+    
+   
+   
+        <div class="leftbar-footer">
+         <button onclick="location.href='./about.html'" type="button">
+         ABOUT</button>
+        </div>
+      </div>     
+    </div>
+    
+    <!-- Load Leaflet and Carto libraries -->
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://libs.cartocdn.com/carto.js/v4.1.11/carto.min.js"></script>
+    
+    <!-- Load Promises polyfill -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+    
+    <!-- Load Fetch polyfill -->
+    <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.4/fetch.js"></script>
+    
+    <script src="./script.js"></script>
+  </body>
+</html>
