@@ -22,8 +22,7 @@
         <!-- We create a div where the feature data will go when clicked on: -->
         <div class = "sidebar-feature-content"></div>
         </div>
-   
-      
+          
       <div class="leftbar">
         
           INCINERATORS IN DECLINE
@@ -37,7 +36,7 @@
          NO FILTER
         </button>
         
-             <button class= "toggle-ej">
+             <button onclick="showLegend()" class= "toggle-ej">
          ENVIRONMENTAL JUSTICE COMMUNITY
         </button>
       <br>
@@ -72,7 +71,22 @@
          <button onclick="location.href='./about.html'" type="button">
          ABOUT</button>
         </div>
-      </div>     
+      </div>   
+    
+    <div id="EJlegend">
+        <div class="legend-header">
+          Legend
+        </div>
+        <div>
+          <span class="legend-marker1"></span> <par>EJ community</par>
+        </div>
+         <div>
+          <span class="legend-marker2"></span> <par>no EJ community</par>
+        </div>
+      </div>
+   
+    
+    
     </div>
     
     <!-- Load Leaflet and Carto libraries -->

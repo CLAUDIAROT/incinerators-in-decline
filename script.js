@@ -8,6 +8,9 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
   maxZoom: 18
 }).addTo(map);
 
+  var x = document.getElementById("EJlegend");
+    x.style.display = "none";
+
 // Initialize Carto
 var client = new carto.Client({
   apiKey: 'default_public',
@@ -97,6 +100,10 @@ ejButton.addEventListener('click', function () {
   marker-line-opacity: 1;
 }
 `);
+  
+  var x = document.getElementById("EJlegend");
+    x.style.display = "block";
+ 
 });
 
 var tonnageButton = document.querySelector('.toggle-tonnage');
@@ -113,6 +120,9 @@ tonnageButton.addEventListener('click', function () {
   marker-line-opacity: 1;
 }
 `);
+  
+  var x = document.getElementById("EJlegend");
+    x.style.display = "none";
 });
 
 
@@ -132,6 +142,8 @@ leadButton.addEventListener('click', function () {
   marker-line-opacity: 1;
 }
 `);
+    var x = document.getElementById("EJlegend");
+    x.style.display = "none";
 });
 
 var mercuryButton = document.querySelector('.toggle-mercury');
@@ -148,6 +160,8 @@ mercuryButton.addEventListener('click', function () {
   marker-line-opacity: 1;
 }
 `);
+    var x = document.getElementById("EJlegend");
+    x.style.display = "none";
 });
 
 var noxButton = document.querySelector('.toggle-nox');
@@ -164,6 +178,8 @@ noxButton.addEventListener('click', function () {
   marker-line-opacity: 1;
 }
 `);
+    var x = document.getElementById("EJlegend");
+    x.style.display = "none";
 });
 
 var pm25Button = document.querySelector('.toggle-pm25');
@@ -180,6 +196,8 @@ pm25Button.addEventListener('click', function () {
   marker-line-opacity: 1;
 }
 `);
+    var x = document.getElementById("EJlegend");
+    x.style.display = "none";
 });
 
 var nofilterButton = document.querySelector('.toggle-nofilter');
@@ -196,7 +214,18 @@ nofilterButton.addEventListener('click', function () {
   marker-line-opacity: 1;
 }
 `);
+    var x = document.getElementById("EJlegend");
+    x.style.display = "none";
 });
+
+// function showLegend() {
+//   var x = document.getElementById("EJlegend");
+//   if (x.style.display === "none") {
+//     x.style.display = "block";
+//   } else {
+//     x.style.display = "none";
+//   }
+// }
 
 
 // Add the data to the map as a layer

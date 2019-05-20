@@ -9,8 +9,37 @@ html, body {
 par {
   font-size: 12px;
 
+}
 
+#EJlegend {
+  background: white;
+  padding: 15px;
+  position: absolute;
+  top: 15px;
+  right: 300px;
+  z-index: 5000;
+}
 
+.legend-header {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.legend-marker1 {
+  display: inline-block;
+  background-color: #ea8171;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+}
+
+.legend-marker2 {
+  display: inline-block;
+  background: #f6d2a9;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
 }
 
 html {
@@ -22,8 +51,7 @@ html {
 
 h3 {
 color: #FFFFFF;
-font-size: 18px;
-}
+font-size: 18px;}
 
 h5 {
 color: #000000;
