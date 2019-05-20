@@ -1,2 +1,3 @@
-# incinerators-in-decline
-Interactive map for the collaboration between the Tishman Environment and Design Center and GAIA. 
+# carto-location-click
+
+Get data from Carto using the SQL API
