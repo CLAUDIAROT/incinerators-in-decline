@@ -51,7 +51,7 @@ var style2 = new carto.style.CartoCSS(`
 // Note: any column you want to show up in the popup needs to be in the list of
 // featureClickColumns below
 var layer = new carto.layer.Layer(source, style, {
-  featureClickColumns: ['name', 'yr_built', 'state', 'operator', 'day_tonnage', 'lead_2014', 'merc_2014', 'pm25_2014', '_3mile_poc', '_3mile_pov', 'ej_comm', 'nox_2014', 'ej_yesno'] 
+  featureClickColumns: ['name', 'yr_built', 'state', 'operator', 'day_tonnage', 'lead_2014', 'merc_2014', 'pm25_2014', '_3mile_poc', '_3mile_pov', 'ej_comm', 'nox_2014', 'ej_yesno', 'closed'] 
 });
 
 var layer2 = new carto.layer.Layer(source2, style2);
@@ -61,6 +61,12 @@ layer.on('featureClicked', function (event) {
   
   var content = '<h3>' + event.data['name'] + '</h3>'
   //content += '<div>$' + event.data['city'] + event.data['state'] ' per night</div>';
+    if (event.data['closed']) {
+    content += '<b><h6>CLOSED</h6></b>';
+    }
+    else {
+    content += ' ';
+    }
     content += '<b>Year of Construction</b>: ' + event.data['yr_built'] ;
     content += '<br><b>Operator:</b> ' + event.data['operator'] ;
     content += '<br><b>Daily Tonnage:</b> ' + event.data['day_tonnage'] ;

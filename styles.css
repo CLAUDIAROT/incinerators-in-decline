@@ -59,6 +59,11 @@ font-size: 15px;
 margin: 0px 25px;
 }
 
+h6 {
+color: #BA7461;
+font-size: 16px;
+}
+
 
 .map-wrapper {
   position: relative;
