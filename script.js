@@ -1,12 +1,14 @@
 // This isn't necessary but it keeps the editor from thinking L and carto are typos
 /* global L, carto */
 
-var map = L.map('map').setView([40.378, -100], 4);
+
+var map = L.map('map', {minZoom: 0, maxZoom: 8}).setView([40.378, -100], 4);
 var ejcommunity = [];
 // Add base layer
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
   maxZoom: 18
 }).addTo(map);
+
 
   var x = document.getElementById("EJlegend");
     x.style.display = "none";
@@ -51,7 +53,7 @@ var style2 = new carto.style.CartoCSS(`
 // Note: any column you want to show up in the popup needs to be in the list of
 // featureClickColumns below
 var layer = new carto.layer.Layer(source, style, {
-  featureClickColumns: ['name', 'yr_built', 'state', 'operator', 'day_tonnage', 'lead_2014', 'merc_2014', 'pm25_2014', '_3mile_poc', '_3mile_pov', 'ej_comm', 'nox_2014', 'ej_yesno', 'closed'] 
+  featureClickColumns: ['name', 'yr_built', 'state', 'operator', 'day_tonnage', 'lead_2014', 'merc_2014', 'pm25_2014', '_3mile_poc', '_3mile_pov', 'ej_comm', 'nox_2014', 'ej_yesno', 'closed', 'address', 'city', 'state'] 
 });
 
 var layer2 = new carto.layer.Layer(source2, style2);
@@ -66,8 +68,11 @@ layer.on('featureClicked', function (event) {
     }
     else {
     content += ' ';
-    }
-    content += '<b>Year of Construction</b>: ' + event.data['yr_built'] ;
+    } 
+    content += '<b>Address: </b>'+ event.data['address']
+      content += ', ' + event.data['city'] ;
+      content += ', ' + event.data['state'] ;
+    content += '<br><b>Year of Construction</b>: ' + event.data['yr_built'] ;
     content += '<br><b>Operator:</b> ' + event.data['operator'] ;
     content += '<br><b>Daily Tonnage:</b> ' + event.data['day_tonnage'] ;
     
@@ -224,6 +229,7 @@ nofilterButton.addEventListener('click', function () {
     x.style.display = "none";
 });
 
+
 // function showLegend() {
 //   var x = document.getElementById("EJlegend");
 //   if (x.style.display === "none") {
@@ -232,6 +238,7 @@ nofilterButton.addEventListener('click', function () {
 //     x.style.display = "none";
 //   }
 // }
+
 
 
 // Add the data to the map as a layer
