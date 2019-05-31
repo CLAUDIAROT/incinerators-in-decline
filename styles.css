@@ -11,6 +11,11 @@ par {
   color: white;
 }
 
+leg {
+  font-size: 12px;
+  color: black;
+}
+
 parsmall {
   font-size: 10px;
   line-height: 0.8;

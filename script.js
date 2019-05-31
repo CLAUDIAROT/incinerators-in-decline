@@ -230,17 +230,6 @@ nofilterButton.addEventListener('click', function () {
 });
 
 
-// function showLegend() {
-//   var x = document.getElementById("EJlegend");
-//   if (x.style.display === "none") {
-//     x.style.display = "block";
-//   } else {
-//     x.style.display = "none";
-//   }
-// }
-
-
-
 // Add the data to the map as a layer
 client.addLayer(layer2);
 client.addLayer(layer);
