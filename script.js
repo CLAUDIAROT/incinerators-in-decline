@@ -83,8 +83,8 @@ layer.on('featureClicked', function (event) {
     content += '<b><br>2014 NOx :</b>  ' + event.data['nox_2014'] ;
   
     content += '<br><br><h4>Demographic Data 3-mile radius </h4>' ;
-    content += '<b>Percentage Minority:</b> ' + event.data['_3mile_poc'] ;
-    content += '<br><b>Percentage Poverty:</b> ' + event.data['_3mile_pov'] ;
+    content += '<b>Percentage Minority:</b> ' + event.data['column_3mile_poc'] ;
+    content += '<br><b>Percentage Poverty:</b> ' + event.data['column_3mile_pov'] ;
     /// EJ community If statement
     if (event.data['ej_yesno']) {
     content += '<br><b> Located in an EJ community: </b> yes';
