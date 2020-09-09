@@ -53,7 +53,7 @@ var style2 = new carto.style.CartoCSS(`
 // Note: any column you want to show up in the popup needs to be in the list of
 // featureClickColumns below
 var layer = new carto.layer.Layer(source, style, {
-  featureClickColumns: ['name', 'yr_built', 'state', 'operator', 'day_tonnage', 'lead_2014', 'merc_2014', 'pm25_2014', '_3mile_poc', '_3mile_pov', 'ej_comm', 'nox_2014', 'ej_yesno', 'closed', 'address', 'city', 'state'] 
+  featureClickColumns: ['name', 'yr_built', 'state', 'operator', 'day_tonnage', 'lead_2014', 'merc_2014', 'pm25_2014', 'column_3mile_poc', 'column_3mile_pov', 'ej_comm', 'nox_2014', 'ej_yesno', 'closed', 'address', 'city', 'state'] 
 });
 
 var layer2 = new carto.layer.Layer(source2, style2);
